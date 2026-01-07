@@ -8,7 +8,7 @@ namespace ForecastTests.WeatherForecastTests
         public void WeatherForecast_should_has_89F()
         {
             TestClient
-                .Attempts(new GetTempretureAsF()) //TODO if we put a property name, it does not work. Example: nameof(WeatherForecast.TemperatureF)
+                .Attempts(new GetTempretureAsF())
                 .Using(new WeatherForecastDependencies())
                 .WithNoSituation()
                 .Then(new Get89F())
